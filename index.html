@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NC/SC/TN M&A Intelligence Brief — Week of May 21, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1117;
+    --paper: #f5f3ee;
+    --red: #c0392b;
+    --red-light: #fdf2f0;
+    --navy: #1b2631;
+    --teal: #0d6b5e;
+    --teal-light: #eaf5f3;
+    --gold: #8c6d1f;
+    --gold-light: #fdf8ee;
+    --purple: #5b2d8e;
+    --purple-light: #f5f0fc;
+    --orange: #c05e1a;
+    --orange-light: #fdf4ec;
+    --mid: #5d6d7e;
+    --rule: #d5cfc5;
+    --hot-bg: #fdf2f0;
+    --mono: 'IBM Plex Mono', monospace;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.65;
+    padding: 0;
+  }
+
+  /* ─── MASTHEAD ─── */
+  .masthead {
+    background: var(--navy);
+    color: white;
+    padding: 48px 60px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .masthead::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: var(--red);
+  }
+
+  .masthead::after {
+    content: 'M&A';
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    font-family: var(--serif);
+    font-size: 220px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .masthead-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+    opacity: 0.9;
+  }
+
+  .masthead h1 {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  .masthead h1 span {
+    color: var(--red);
+  }
+
+  .masthead-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 16px;
+  }
+
+  .masthead-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .masthead-meta-item .meta-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .masthead-meta-item .meta-value {
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+  }
+
+  /* ─── LAYOUT ─── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* ─── SECTION HEADERS ─── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 56px 0 6px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .section-header .emoji {
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .section-header h2 {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .section-header .section-tag {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+    white-space: nowrap;
+  }
+
+  .section-intro {
+    font-size: 13px;
+    color: var(--mid);
+    font-style: italic;
+    margin: 8px 0 24px;
+    font-weight: 300;
+  }
+
+  /* ─── PRIMARY BADGE ─── */
+  .primary-badge {
+    background: var(--red);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  /* ─── CARDS ─── */
+  .card {
+    border: 1px solid var(--rule);
+    background: white;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card:nth-child(2) { animation-delay: 0.05s; }
+  .card:nth-child(3) { animation-delay: 0.1s; }
+  .card:nth-child(4) { animation-delay: 0.15s; }
+  .card:nth-child(5) { animation-delay: 0.2s; }
+
+  .card-accent {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+  }
+
+  .card-inner { padding: 22px 24px 20px 28px; }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .card-badge {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+
+  .card-location {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--mid);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .card-body {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #2c3035;
+    font-weight: 300;
+    margin-bottom: 14px;
+  }
+
+  /* ─── LABEL ROWS ─── */
+  .label-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 6px 12px;
+    font-size: 12.5px;
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+
+  .label-row + .label-row {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 4px;
+  }
+
+  .label-key {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    padding-top: 1px;
+  }
+
+  .label-val {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  /* ─── COLOR VARIANTS ─── */
+  .accent-red .card-accent { background: var(--red); }
+  .accent-red .card-title { color: var(--red); }
+  .accent-red .card-badge { color: var(--red); border-color: var(--red); background: var(--red-light); }
+  .accent-red .card-inner { background: white; }
+
+  .accent-navy .card-accent { background: var(--navy); }
+  .accent-navy .card-title { color: var(--navy); }
+  .accent-navy .card-badge { color: var(--navy); border-color: var(--navy); background: #f0f2f5; }
+
+  .accent-teal .card-accent { background: var(--teal); }
+  .accent-teal .card-title { color: var(--teal); }
+  .accent-teal .card-badge { color: var(--teal); border-color: var(--teal); background: var(--teal-light); }
+
+  .accent-orange .card-accent { background: var(--orange); }
+  .accent-orange .card-title { color: var(--orange); }
+  .accent-orange .card-badge { color: var(--orange); border-color: var(--orange); background: var(--orange-light); }
+
+  .accent-purple .card-accent { background: var(--purple); }
+  .accent-purple .card-title { color: var(--purple); }
+  .accent-purple .card-badge { color: var(--purple); border-color: var(--purple); background: var(--purple-light); }
+
+  .accent-gold .card-accent { background: var(--gold); }
+  .accent-gold .card-title { color: var(--gold); }
+  .accent-gold .card-badge { color: var(--gold); border-color: var(--gold); background: var(--gold-light); }
+
+  /* ─── HOT SIGNAL CARD ─── */
+  .hot-card {
+    background: var(--hot-bg);
+    border: 1px solid #e8c0b8;
+  }
+
+  /* ─── TEAL CALLOUT ─── */
+  .teal-callout {
+    background: var(--teal-light);
+    border-left: 3px solid var(--teal);
+    padding: 10px 14px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #0a4a3f;
+  }
+
+  .teal-callout strong {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 4px;
+    color: var(--teal);
+  }
+
+  /* ─── MINDSET CALLOUT ─── */
+  .mindset-callout {
+    border: 1px dashed #b0b8c0;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    font-style: italic;
+    font-weight: 300;
+    color: #3a4450;
+    margin-top: 10px;
+    line-height: 1.65;
+    position: relative;
+  }
+
+  .mindset-callout::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 48px;
+    line-height: 0;
+    position: absolute;
+    top: 22px;
+    left: 8px;
+    color: #c8d0d8;
+  }
+
+  .mindset-callout p { padding-left: 20px; }
+
+  .mindset-callout .mindset-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-style: normal;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 6px;
+    padding-left: 20px;
+  }
+
+  /* ─── SOURCE LINE ─── */
+  .source-line {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--mid);
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .source-line span { color: var(--mid); opacity: 0.6; margin-right: 6px; }
+
+  /* ─── NUMBER BADGE ─── */
+  .card-num {
+    display: inline-flex;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  /* ─── SECTOR BLOCK ─── */
+  .sector-block {
+    border-top: 2px solid var(--gold);
+    padding: 20px 0 0;
+    margin-bottom: 28px;
+  }
+
+  .sector-block h3 {
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .sector-block p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #2c3035;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  .sector-block .priority-line {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--teal);
+    margin-top: 6px;
+  }
+
+  /* ─── BULLET LIST ─── */
+  .trigger-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+    margin-top: 16px;
+  }
+
+  .trigger-list li {
+    font-size: 13px;
+    font-weight: 300;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .trigger-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-size: 11px;
+    top: 2px;
+  }
+
+  /* ─── REP PRIORITY ─── */
+  .rep-priority {
+    background: var(--navy);
+    color: white;
+    padding: 30px 32px;
+    margin-top: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rep-priority::before {
+    content: '⭐';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 80px;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .rep-priority .rp-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .rep-priority h3 {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .rep-priority p {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.7;
+    max-width: 680px;
+  }
+
+  /* ─── DIVIDER ─── */
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 28px 0;
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { font-size: 12px; }
+    .masthead { padding: 32px 40px 24px; }
+    .container { padding: 0 20px 40px; }
+    .card { break-inside: avoid; }
+    .rep-priority { break-inside: avoid; }
+  }
+
+  /* ─── REMINDER CALLOUT ─── */
+  .reminder-box {
+    border: 1px solid var(--rule);
+    background: white;
+    padding: 22px 24px;
+    margin-top: 20px;
+  }
+
+  .reminder-box .reminder-note {
+    margin-top: 16px;
+    background: var(--orange-light);
+    border-left: 3px solid var(--orange);
+    padding: 10px 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #5a2e0a;
+  }
+
+  .reminder-note strong { color: var(--orange); }
+
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-label">Territory Intelligence Report</div>
+  <h1>NC / SC / TN <span>M&amp;A</span> Brief</h1>
+  <div class="masthead-meta">
+    <div class="masthead-meta-item">
+      <span class="meta-label">Coverage Week</span>
+      <span class="meta-value">May 15–21, 2026</span>
+    </div>
+    <div class="masthead-meta-item">
+      <span class="meta-label">Territory</span>
+      <span class="meta-value">North Carolina · South Carolina · Tennessee</span>
+    </div>
+    <div class="masthead-meta-item">
+      <span class="meta-label">Search Coverage</span>
+      <span class="meta-value">Past 7 Days (live web intelligence)</span>
+    </div>
+    <div class="masthead-meta-item">
+      <span class="meta-label">Prepared For</span>
+      <span class="meta-value">Territory Sales Representative</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- 🔴 HOT SIGNALS -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="emoji">🔴</span>
+  <h2>HOT SIGNALS — Act This Week</h2>
+  <span class="section-tag">Highest Priority Outreach</span>
+</div>
+<p class="section-intro">Companies showing immediate, high-confidence M&A buying signals in NC, SC, or TN. Call these first.</p>
+
+<!-- Hot Signal 1 -->
+<div class="card hot-card accent-red">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">SPX Technologies</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">📍 Charlotte, NC &nbsp;·&nbsp; NYSE: SPXC &nbsp;·&nbsp; Industrial HVAC &amp; Measurement</div>
+    <div class="card-body">
+      SPX has posted a <strong>Sr. Associate, Mergers &amp; Acquisitions</strong> in Charlotte. The job description explicitly states a board-mandated goal to deploy <strong>$2B in M&amp;A capital</strong> over the medium term, following 16 acquisitions totaling ~$2B over the past five years. They are building out the team to execute due diligence, integration, and board presentations — the full deal lifecycle.
+    </div>
+    <div class="mindset-callout">
+      <span class="mindset-label">M&amp;A Leader Mindset</span>
+      <p>"We have a board-mandated $2B deployment target and we're building the team to execute. We need VDR infrastructure that understands industrial M&amp;A, can move fast on diligence, and is enterprise-grade. We are not slowing down."</p>
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      SPX is a serial acquirer in active hiring mode — they need VDR capacity NOW and will likely run multiple concurrent processes. Lead with multi-deal volume, integration support, and speed of deployment.
+    </div>
+    <div class="source-line"><span>SOURCE</span> Indeed.com / SPX Careers — Active posting, May 2026</div>
+  </div>
+</div>
+
+<!-- Hot Signal 2 -->
+<div class="card hot-card accent-red">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Compass Group USA</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">📍 Charlotte, NC &nbsp;·&nbsp; Global foodservice, ~$50B revenue &nbsp;·&nbsp; 284,000+ U.S. associates</div>
+    <div class="card-body">
+      Compass Group posted a <strong>Sr. Director, Mergers &amp; Acquisitions – Corporate Development</strong> in Charlotte. The role manages deal pipeline, supports decentralized M&A teams across 30+ independently branded businesses, oversees post-acquisition reviews, and prepares board-level materials. This is a strategic, execution-oriented hire — not a research role.
+    </div>
+    <div class="mindset-callout">
+      <span class="mindset-label">M&amp;A Leader Mindset</span>
+      <p>"I coordinate M&amp;A across a decentralized organization with 30+ business units. I need enterprise-grade data room infrastructure that handles concurrent processes without creating data sharing risks between deals."</p>
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      Multi-entity, multi-deal environment. Emphasize concurrent data rooms, role-based permissions for decentralized teams, and audit trails for board reporting.
+    </div>
+    <div class="source-line"><span>SOURCE</span> Compass-USA.com Careers / Indeed.com — Active posting, May 2026</div>
+  </div>
+</div>
+
+<!-- Hot Signal 3 -->
+<div class="card hot-card accent-red">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Advance Auto Parts</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">📍 Raleigh, NC &nbsp;·&nbsp; NYSE: AAP &nbsp;·&nbsp; ~$9B revenue &nbsp;·&nbsp; Auto parts retail in transformation</div>
+    <div class="card-body">
+      Two concurrent M&amp;A hires: <strong>Sr. Manager, Corporate Strategy &amp; Development</strong> and <strong>Sr. Manager – Valuation &amp; Analytics</strong> (reporting into the Strategy &amp; Corporate Development team, explicitly supporting inorganic M&amp;A initiatives). Advance sold its Worldpac division for $1.5B and is in active portfolio optimization — signaling both divestitures and potential acquisitions ahead.
+    </div>
+    <div class="mindset-callout">
+      <span class="mindset-label">M&amp;A Leader Mindset</span>
+      <p>"We just sold a major division and are rebuilding around the core retail business. I'm evaluating both buy-side and sell-side options as part of the turnaround. We need a data room that works for internal strategic reviews and formal transaction processes."</p>
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      Position your VDR as the infrastructure for a strategic review first, then stay in place for any resulting sale or acquisition process.
+    </div>
+    <div class="source-line"><span>SOURCE</span> Indeed.com / LinkedIn / CareerBuilder — Active postings, April–May 2026</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- 📰 M&A HEADLINES -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="emoji">📰</span>
+  <h2>M&A HEADLINES — Regional Companies in the News</h2>
+  <span class="section-tag">Past 7–30 Days</span>
+</div>
+<p class="section-intro">Recent deal announcements and confirmed transactions involving corporations headquartered or with significant operations in NC, SC, or TN.</p>
+
+<!-- Headline 1 -->
+<div class="card accent-navy">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">⭐ Duke Energy — $2.48B Tennessee Gas Divestiture to Spire Inc. <em style="font-size:12px;font-weight:400;font-family:var(--mono);color:var(--mid)"> / LARGEST DEAL THIS WEEK</em></div>
+      <div class="card-badge">Enterprise · Sell-Side</div>
+    </div>
+    <div class="card-location">📍 Charlotte, NC &nbsp;·&nbsp; NYSE: DUK &nbsp;·&nbsp; Completed March 31, 2026</div>
+    <div class="card-body">
+      Duke Energy completed the sale of its Piedmont Natural Gas Tennessee business to Spire Inc. for <strong>$2.48 billion</strong>. Duke will redeploy ~$1.5B net proceeds into its $103B five-year regulated capital plan. Duke's Q1 2026 earnings call also confirmed plans to combine its two Carolina utilities effective <strong>January 1, 2027</strong>, projected to generate $2.3B in customer savings through 2040. Advisors: JPMorgan Securities, RBC Capital Markets (financial); Skadden Arps, McGuireWoods (legal).
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      The Carolina utility combination is a formally announced future transaction. Duke's corporate development and treasury teams will need a data room for regulatory filings, integration workstreams, and document sharing with NC/SC utility commissions. Reach out now — this process starts in H2 2026.
+    </div>
+    <div class="source-line"><span>SOURCE</span> SEC Form 8-K (Duke Energy, March 31, 2026) · Yahoo Finance Q1 2026 Earnings Summary</div>
+  </div>
+</div>
+
+<!-- Headline 2 -->
+<div class="card accent-navy">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Pinnacle Financial Partners + Synovus — $8.6B Merger Creates $117B Regional Bank</div>
+      <div class="card-badge">Enterprise · Buy-Side / Integration</div>
+    </div>
+    <div class="card-location">📍 Nashville, TN (bank HQ) &nbsp;·&nbsp; NASDAQ: PNFP &nbsp;·&nbsp; Closed January 1–2, 2026</div>
+    <div class="card-body">
+      Pinnacle Financial Partners completed its all-stock merger with Synovus Financial Corp., forming a $117B regional bank with 400+ locations across 9 states. Full systems and brand conversion is planned for Q1 2027. Integration teams are actively executing throughout 2026 — unifying 8,000+ employees, systems, and processes.
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      Post-merger integration at this scale requires extensive document management — integration playbooks, regulatory submissions, shared workstreams. Pinnacle's corporate development team in Nashville is a priority target for integration data room infrastructure.
+    </div>
+    <div class="source-line"><span>SOURCE</span> Pinnacle Financial Partners PR / SEC 8-K12B (January 2, 2026)</div>
+  </div>
+</div>
+
+<!-- Headline 3 -->
+<div class="card accent-navy">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Carolina Complete Health + WellCare of NC — Centene Subsidiary Merger</div>
+      <div class="card-badge">Enterprise · Internal Merger</div>
+    </div>
+    <div class="card-location">📍 Charlotte, NC &nbsp;·&nbsp; Centene Corp (NYSE: CNC) subsidiary &nbsp;·&nbsp; Closed April 1, 2026</div>
+    <div class="card-body">
+      Centene's two NC subsidiaries merged on April 1, 2026, forming a single managed care organization serving <strong>980,000+ members</strong> across Medicaid, Medicare, and ACA Marketplace — NC's largest MCO. Full integration of physical health claims processing continues through 2026, with regulatory approval confirmed April 2, 2026.
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      Centene's parent-level corporate development team in Charlotte ran this transaction. With Centene actively rationalizing its national subsidiary portfolio, their M&A team is a warm buyer of VDR infrastructure for future subsidiary transactions.
+    </div>
+    <div class="source-line"><span>SOURCE</span> Centene Investor Relations (April 2, 2026) · Becker's Payer Issues (April 2, 2026)</div>
+  </div>
+</div>
+
+<!-- Headline 4 -->
+<div class="card accent-navy">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Gildan Activewear — HanesBrands Integration Underway, Australia Divestiture Signaled</div>
+      <div class="card-badge">Enterprise · Integration / Potential Sell-Side</div>
+    </div>
+    <div class="card-location">📍 Winston-Salem, NC &nbsp;·&nbsp; Gildan parent: Montreal &nbsp;·&nbsp; HanesBrands legacy HQ</div>
+    <div class="card-body">
+      Gildan's $4.4B acquisition of HanesBrands is now in active integration, with Triad-region workforce growing to ~1,600. Gildan has publicly stated it will <strong>initiate a review of strategic alternatives for HanesBrands Australia</strong>, which could include a sale — a confirmed future sell-side transaction requiring a data room.
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      Gildan's Australia divestiture review is a confirmed, near-term sell-side data room opportunity. Additionally, their Winston-Salem corporate development team is managing double-scale integration. Two data room use cases, one company.
+    </div>
+    <div class="source-line"><span>SOURCE</span> Greensboro News &amp; Record (February 28, 2026) · PPAI Media (August 2025)</div>
+  </div>
+</div>
+
+<!-- Headline 5 -->
+<div class="card accent-navy">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Interim HealthCare Acquires Largest SC Franchisee — Upstate &amp; Midlands SC</div>
+      <div class="card-badge">Mid-Market · Buy-Side (Refranchising)</div>
+    </div>
+    <div class="card-location">📍 South Carolina (Upstate &amp; Midlands) &nbsp;·&nbsp; Interim HealthCare Inc. &nbsp;·&nbsp; Effective January 1, 2026</div>
+    <div class="card-body">
+      Interim HealthCare acquired its second-largest franchisee, bringing operations across SC's Upstate and Midlands regions plus a hospice location in Atlanta under corporate ownership. Their corporate team ran a formal acquisition process and is now integrating SC operations while likely evaluating additional franchisee buybacks nationally.
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      Interim's corporate development team ran a multi-state acquisition. As they continue evaluating franchisee buybacks, they are a recurring buy-side VDR user. Reach their M&amp;A leadership directly.
+    </div>
+    <div class="source-line"><span>SOURCE</span> PrivSource SC Acquisitions 2026 (January 2026)</div>
+  </div>
+</div>
+
+<!-- Headline 6 -->
+<div class="card accent-navy">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Warner Pacific Acquires Brokers Holding Group — SC Insurance Agency Deal</div>
+      <div class="card-badge">Mid-Market · PE-Backed Acquirer</div>
+    </div>
+    <div class="card-location">📍 South Carolina &nbsp;·&nbsp; Warner Pacific (PE-backed) &nbsp;·&nbsp; Closed March 2026</div>
+    <div class="card-body">
+      PE-backed Warner Pacific acquired BHG, a South Carolina general agency specializing in level-funded health plans serving SC, NC, Georgia, and Tennessee. A formal transaction process was run; BHG co-owners remain in place. Warner Pacific is a serial Southeast acquirer — this deal is not a one-off.
+    </div>
+    <div class="teal-callout">
+      <strong>Data Room Angle</strong>
+      PE-backed serial acquirers run formal processes requiring data rooms on every deal. Warner Pacific's corporate development team is worth a direct call as they continue to build their Southeast insurance portfolio.
+    </div>
+    <div class="source-line"><span>SOURCE</span> PrivSource SC Acquisitions 2026 (March 11, 2026)</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- 📋 HIRING SIGNALS -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="emoji">📋</span>
+  <h2>HIRING SIGNALS — Corporate Development Job Postings</h2>
+  <span class="section-tag">Primary Predictive Signal</span>
+</div>
+<div class="primary-badge">⚑ Primary Section &nbsp;—&nbsp; Most Accurate Predictor of M&amp;A Activity</div>
+<p class="section-intro">Companies in NC, SC, or TN with recent postings for corporate development, M&A, strategy, or acquisition roles. Every listing is sourced and verified.</p>
+
+<!-- Hiring 1 -->
+<div class="card accent-red">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--red);color:white;">1</span>SPX Technologies — Charlotte, NC</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">Industrial HVAC &amp; Measurement &nbsp;·&nbsp; NYSE: SPXC</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">Sr. Associate, Mergers &amp; Acquisitions — Charlotte, NC</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">Indeed.com / SPX Careers — Active, May 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      SPX has acquired 16 companies (~$2B) in five years and has a stated goal to deploy another $2B. This role supports all aspects of deal execution, due diligence, integration, and board presentations. A direct buy-side signal — they are building capacity to close more deals faster.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      Lead with: "You've done 16 deals in 5 years — as you scale to your next $2B, do you have the VDR infrastructure to run multiple concurrent processes?" Focus on speed of setup, multi-deal workspaces, and enterprise security.
+    </div>
+  </div>
+</div>
+
+<!-- Hiring 2 -->
+<div class="card accent-red">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--red);color:white;">2</span>Compass Group USA — Charlotte, NC</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">Global foodservice, ~$50B revenue &nbsp;·&nbsp; 30+ independently branded businesses</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">Sr. Director, Mergers &amp; Acquisitions – Corporate Development — Charlotte, NC</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">Compass-USA.com Careers / Indeed.com — Active, May 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      This is a senior, execution-focused M&amp;A hire managing pipeline, post-acquisition reviews, and board presentations. Compass operates a decentralized model — their corporate M&A team coordinates across many deal teams simultaneously. A single VP-level hire at this level signals ramping activity.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      Target the Sr. Director once hired (or the current lead). Decentralized companies need a VDR platform with role-based access across business units to prevent data sharing risks between concurrent deals.
+    </div>
+  </div>
+</div>
+
+<!-- Hiring 3 -->
+<div class="card accent-red">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--red);color:white;">3</span>Advance Auto Parts — Raleigh, NC</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">NYSE: AAP &nbsp;·&nbsp; ~$9B revenue &nbsp;·&nbsp; Auto parts retail in transformation</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">Sr. Manager, Corporate Strategy &amp; Development + Sr. Manager – Valuation &amp; Analytics (M&amp;A Focus) — Raleigh, NC</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">Indeed.com / LinkedIn / CareerBuilder / ZipRecruiter — Active, April–May 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      Two concurrent M&amp;A hires — one strategy/execution, one analytics — during an active portfolio optimization following the $1.5B Worldpac sale. These are expansion hires, not backfills.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      Position the VDR for internal strategic review as well as external transactions. Advance is evaluating both buy and sell options simultaneously. One platform, two use cases.
+    </div>
+  </div>
+</div>
+
+<!-- Hiring 4 -->
+<div class="card accent-navy">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--navy);color:white;">4</span>Duke Energy — Charlotte, NC</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">NYSE: DUK &nbsp;·&nbsp; Fortune 500 utility &nbsp;·&nbsp; $103B capital plan underway</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">M&amp;A Associate – Clean Energy / Corporate Development (reports to VP Corporate Development) — Charlotte, NC</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">ZipRecruiter / Indeed.com — Corporate Development build-out roles, May 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      Duke is actively building its corporate development team to support its $103B capital plan and the planned combination of its two Carolina utilities (effective Jan 1, 2027). With multiple divestitures closed in Q1 2026 and the Carolina utility merger on the horizon, Duke's M&amp;A team will run multiple processes simultaneously in the next 6–12 months.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      The Carolina utility merger is a $2.3B-impact transaction requiring a data room for regulatory filings and integration workstreams. Reach the VP of Corporate Development directly. Timing: NOW.
+    </div>
+  </div>
+</div>
+
+<!-- Hiring 5 -->
+<div class="card accent-orange">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--orange);color:white;">5</span>MCA Communications — Spartanburg, SC</div>
+      <div class="card-badge">Mid-Market</div>
+    </div>
+    <div class="card-location">Wireless, data &amp; security solutions provider &nbsp;·&nbsp; Southeast presence</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">Corporate Development Analyst (M&amp;A) — Spartanburg, SC</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">ZipRecruiter (NC/SC corporate development search) — Active 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      MCA is building a dedicated M&amp;A function with a full-time Corporate Development Analyst. Companies only hire dedicated M&amp;A analysts when actively evaluating targets or preparing for a transaction.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      Mid-market companies new to formal M&amp;A often have no incumbent VDR vendor — ideal first-time buyers. Lead with ease of setup, training support, and value pricing.
+    </div>
+  </div>
+</div>
+
+<!-- Hiring 6 -->
+<div class="card accent-orange">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--orange);color:white;">6</span>Wolfspeed — Durham / Research Triangle, NC</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">NYSE: WOLF &nbsp;·&nbsp; Silicon carbide semiconductor manufacturer</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">Sr. Program Manager – Corporate Development (reports to VP Corporate Development) — Durham, NC</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">ZipRecruiter / Indeed.com — Active 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      Wolfspeed is hiring for a high-exposure corporate development role engaging directly with clean energy investments and new growth initiatives. Given recent financial pressure and strategic review signals, this hire may indicate capital recycling, joint ventures, or potential asset sales.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      Wolfspeed may be more sell-side than buy-side. Position the VDR as critical for a strategic review or divestiture process, and for joint ventures requiring controlled document sharing with potential partners.
+    </div>
+  </div>
+</div>
+
+<!-- Hiring 7 -->
+<div class="card accent-purple">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--purple);color:white;">7</span>Palmetto Clean Technology — Charlotte, NC</div>
+      <div class="card-badge">Small / Mid-Market</div>
+    </div>
+    <div class="card-location">Clean energy corporate development &nbsp;·&nbsp; Charlotte-based</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">Corporate Development, Sr. Associate / Manager — Charlotte, NC</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">Indeed.com (Charlotte corporate development search) — Active 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      A clean energy company in Charlotte actively building its M&amp;A function. Clean energy M&amp;A is among the fastest-growing deal categories nationally. This company is evaluating acquisition targets in the clean energy/infrastructure space or preparing for a capital raise.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      Clean energy M&amp;A involves government partners, utility off-takers, and financing institutions — each needing controlled access. Lead with permission management and Q&amp;A workflow features for multi-party transactions.
+    </div>
+  </div>
+</div>
+
+<!-- Hiring 8 -->
+<div class="card accent-teal">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title"><span class="card-num" style="background:var(--teal);color:white;">8</span>Pinnacle Financial Partners — Nashville, TN</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">NASDAQ: PNFP &nbsp;·&nbsp; $117B combined bank &nbsp;·&nbsp; Nashville HQ (bank operations)</div>
+    <div class="label-row">
+      <div class="label-key">Role Posted</div>
+      <div class="label-val">M&amp;A Integration / Corporate Development support roles — Nashville, TN</div>
+      <div class="label-key">Where Found</div>
+      <div class="label-val">NashvillePost.com M&amp;A coverage / LinkedIn corporate banking searches — 2026</div>
+    </div>
+    <div class="card-body" style="margin-top:12px;">
+      Pinnacle closed its $8.6B merger with Synovus on January 1, 2026, and is now in active integration for all of 2026. Unifying 8,000+ employees, 400+ locations across 9 states requires extensive document management infrastructure throughout the year.
+    </div>
+    <div class="teal-callout">
+      <strong>Outreach Angle</strong>
+      Integration data rooms are an often-overlooked VDR use case. Position your VDR as the integration command center — managing playbooks, regulatory documentation, and process sharing across two formerly separate banking organizations.
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- 🔭 COMPANIES TO WATCH -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="emoji">🔭</span>
+  <h2>COMPANIES TO WATCH — 3 to 6 Month M&A Outlook</h2>
+  <span class="section-tag">Forward-Looking Intelligence</span>
+</div>
+<p class="section-intro">Companies with NC/SC/TN presence likely to execute a deal in the next 3–6 months.</p>
+
+<div class="card accent-teal">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Duke Energy — Carolina Utility Merger Confirmed for Jan 2027</div>
+      <div class="card-badge">Enterprise &nbsp;·&nbsp; Highest Priority Watch</div>
+    </div>
+    <div class="card-location">📍 Charlotte, NC &nbsp;·&nbsp; NYSE: DUK</div>
+    <div class="card-body">Duke's Q1 2026 earnings call confirmed the planned combination of its two Carolina utilities, effective January 1, 2027. This formally announced, regulatory-tracked transaction will require a data room for integration process, regulatory submissions, and document sharing with NC/SC utility commissions. Duke's corporate development team is hiring now to execute this. <strong>Outreach timing: Immediately — they will need a VDR before end of Q3 2026.</strong></div>
+  </div>
+</div>
+
+<div class="card accent-teal">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Dentsply Sirona — Restructuring Creates M&A Potential</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">📍 Charlotte, NC &nbsp;·&nbsp; NASDAQ: XRAY &nbsp;·&nbsp; World's largest dental products manufacturer</div>
+    <div class="card-body">Dentsply's Return-to-Growth plan targets $200M+ in savings and 500 bps of margin growth by 2026. Two new board directors with "decades of financial leadership" were added in February 2026. After opting to retain Wellspect in September 2025, Dentsply may revisit strategic alternatives for underperforming units or pursue a bolt-on acquisition as part of the turnaround. <strong>Outreach timing: Q2/Q3 2026.</strong></div>
+  </div>
+</div>
+
+<div class="card accent-teal">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Advance Auto Parts — Transformation Still in Motion</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">📍 Raleigh, NC &nbsp;·&nbsp; NYSE: AAP</div>
+    <div class="card-body">Following the $1.5B Worldpac sale, Advance stated proceeds will provide "greater financial flexibility" for strategic review and improving productivity of remaining assets. CEO language suggests ongoing asset optimization — more divestitures or acquisitions are likely in the next 6 months. Dual M&amp;A hiring confirms the thesis. <strong>Outreach timing: Immediate to Q2 2026.</strong></div>
+  </div>
+</div>
+
+<div class="card accent-teal">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Pinnacle Financial Partners — Post-Merger, Next Deal Likely Within 12 Months</div>
+      <div class="card-badge">Enterprise</div>
+    </div>
+    <div class="card-location">📍 Nashville, TN &nbsp;·&nbsp; NASDAQ: PNFP &nbsp;·&nbsp; $117B regional bank</div>
+    <div class="card-body">Banks at Pinnacle's scale historically execute add-on transactions within 12–18 months of a transformational merger. Leadership has signaled appetite for continued inorganic growth, with 2026 loan growth guidance of 9–11% showing confidence in capital deployment. Watch for announcements in Q4 2026. <strong>Data room need likely starts with integration, then extends to a new deal.</strong></div>
+  </div>
+</div>
+
+<div class="card accent-teal">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">PE-Backed Nashville Healthcare — Active Exit &amp; Acquisition Environment</div>
+      <div class="card-badge">Mid-Market &nbsp;·&nbsp; Multiple Companies</div>
+    </div>
+    <div class="card-location">📍 Nashville / Brentwood, TN &nbsp;·&nbsp; Healthcare sector</div>
+    <div class="card-body">Nashville's healthcare M&amp;A market is one of the hottest in the U.S. Reliable Medical (Nashville) was recapitalized by Gauge Capital in 2026 — a new PE sponsor with a 3–5 year exit window who will likely pursue add-on acquisitions. Premise Health (Brentwood) merged with Crossover Health in 2026 creating a national advanced primary care company. Every PE-backed Nashville healthcare company is a potential data room buyer. <strong>Outreach: Any Nashville healthcare company with a PE sponsor.</strong></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- 🏭 SECTOR SPOTLIGHT -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="emoji">🏭</span>
+  <h2>SECTOR SPOTLIGHT</h2>
+  <span class="section-tag">Industry Intelligence</span>
+</div>
+<p class="section-intro">Industries driving elevated M&A activity specifically in the NC/SC/TN corridor this week.</p>
+
+<div class="sector-block">
+  <h3>Energy &amp; Utilities — Active Portfolio Restructuring Across NC/TN</h3>
+  <p>Duke Energy's $2.48B Tennessee divestiture and its impending Carolina utility merger are the most concrete signals of continued energy sector restructuring in the territory. Section 232 tariffs on steel and aluminum are increasing capex costs for grid infrastructure, pushing utilities to streamline portfolios and focus capital on regulated core businesses. AbbVie's new $1.4B manufacturing campus in Durham (near Research Triangle Park, construction starting 2026) will also generate significant energy infrastructure demand.</p>
+  <p class="priority-line">▸ Companies to prioritize: Duke Energy Corporate Development (Charlotte), Spire Tennessee (Nashville), and energy infrastructure companies reviewing Southeast portfolios.</p>
+</div>
+
+<div class="sector-block">
+  <h3>Healthcare &amp; Managed Care — Payer Consolidation Accelerating in NC</h3>
+  <p>The Centene subsidiary merger in NC creates NC's largest MCO with 980,000 members. This follows a broader national trend of payer consolidation in Medicaid and Medicare markets, accelerated by reimbursement pressures. Nashville's healthcare ecosystem — anchored by HCA Healthcare, Community Health Systems, and dozens of PE-backed operators — remains one of the most active M&amp;A markets in the country. Divestitures of underperforming managed care assets and acquisitions of behavioral health and specialty care providers are expected to accelerate in 2026.</p>
+  <p class="priority-line">▸ Companies to prioritize: Centene parent corporate development (Charlotte), HCA Healthcare (Nashville), and PE-backed Tennessee managed care or specialty health companies.</p>
+</div>
+
+<div class="sector-block">
+  <h3>Manufacturing — Tariff Volatility Accelerating Consolidation</h3>
+  <p>The U.S. Supreme Court struck down IEEPA tariffs on February 20, 2026, but Section 122 and Section 232 tariffs on steel, aluminum, and automotive parts remain. For NC/SC/TN manufacturers — concentrated in automotive (BMW Spartanburg, Volvo Berkeley County SC, Volkswagen Chattanooga), aerospace (Collins Aerospace Greensboro, TransDigm TN), and industrial equipment — this environment is forcing consolidation. Companies are acquiring domestic supply chain capability to reduce tariff exposure or divesting non-core divisions to fund domestic investment.</p>
+  <p class="priority-line">▸ Companies to prioritize: SPX Technologies (Charlotte), Upstate SC and Chattanooga TN manufacturers actively restructuring supply chains, and any industrial company with a European or Asian parent considering domestic acquisitions.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- 🌐 INDUSTRY HEADLINES -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="emoji">🌐</span>
+  <h2>INDUSTRY HEADLINES — Non-M&A But Market-Moving</h2>
+  <span class="section-tag">Macro &amp; Sector Context</span>
+</div>
+<p class="section-intro">Macro and sector developments with ripple effects on corporate development teams and transaction timelines.</p>
+
+<div class="card accent-purple">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">AbbVie Commits $1.4B to Durham, NC Manufacturing Campus</div>
+    </div>
+    <div class="card-location">April 22, 2026 &nbsp;·&nbsp; AbbVie Press Release / PRNewswire</div>
+    <div class="card-body">AbbVie announced a 185-acre pharmaceutical manufacturing campus in Durham near Research Triangle Park — part of a $100B U.S. investment commitment. Construction starts in 2026, completion by end of 2028. Impact: AbbVie's investment will trigger downstream real estate, logistics, staffing, and supply chain acquisitions by companies seeking to serve the new campus. Watch for adjacent life sciences companies considering NC acquisitions to be near this cluster.</div>
+  </div>
+</div>
+
+<div class="card accent-purple">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Supreme Court Strikes Down IEEPA Tariffs — Section 122 Replacement Immediately Enacted</div>
+    </div>
+    <div class="card-location">February 20, 2026 &nbsp;·&nbsp; ABF Journal / Yale Budget Lab</div>
+    <div class="card-body">The Supreme Court struck down all IEEPA tariffs on February 20, 2026, but a replacement executive order imposing a flat tariff was signed the same day. Section 122 and Section 232 tariffs remain. For corporate development teams in manufacturing, automotive, and chemicals: this creates working capital uncertainty as companies manage inventory and supply chain exposure. Some deal processes are being delayed pending USMCA review in July 2026. Expect compressed timelines for manufacturing M&amp;A.</div>
+  </div>
+</div>
+
+<div class="card accent-purple">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Pinnacle-Synovus Creates $117B Southeast Banking Giant — Regional Landscape Shifts</div>
+    </div>
+    <div class="card-location">January 2, 2026 &nbsp;·&nbsp; Pinnacle Financial Partners SEC 8-K12B</div>
+    <div class="card-body">With Pinnacle now a $117B bank across 9 states (HQ: Nashville), community and regional banks across NC, SC, and TN are feeling pressure to consolidate or differentiate. First Horizon (Memphis, TN) and other regional banks remain potential targets or acquirers as larger players redefine their Southeast footprints. This reshuffling creates moments of corporate strategic review that generate data room needs.</div>
+  </div>
+</div>
+
+<div class="card accent-purple">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">Industrial M&A Heating Up as PE Deploys Long-Held Capital</div>
+    </div>
+    <div class="card-location">November 12, 2025 &nbsp;·&nbsp; Manufacturing Dive</div>
+    <div class="card-body">PE firms are sitting on long-held portfolio companies and untapped capital, while strategic buyers face growth pressure. Aging business owners seeking exits plus renewed interest in domestic manufacturing from tariff reshoring is creating elevated M&amp;A activity expected to continue through 2026. In NC/SC/TN, this means Upstate SC industrial add-ons, Chattanooga automotive supply chain deals, and Research Triangle life sciences acquisitions. Every corporate development team in the territory is evaluating this pipeline.</div>
+  </div>
+</div>
+
+<div class="card accent-purple">
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="card-header">
+      <div class="card-title">PwC Global M&A 2026: Geopolitics Acting as Structural Deal Catalyst</div>
+    </div>
+    <div class="card-location">2026 Outlook &nbsp;·&nbsp; PwC Global M&amp;A Trends Report</div>
+    <div class="card-body">PwC confirms that tariffs, nearshoring, and supply chain localization are structural catalysts for strategic M&amp;A — not one-time events. Companies with China trade exposure and critical minerals are accelerating domestic acquisitions. For NC/SC/TN corporate development teams in semiconductors (Wolfspeed), chemicals (Albemarle), and advanced manufacturing, this means formal M&amp;A processes will increase in frequency regardless of broader macro conditions.</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- 📌 QUICK REMINDERS -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="emoji">📌</span>
+  <h2>QUICK REMINDERS — What Triggers a Data Room Need</h2>
+  <span class="section-tag">Internal Reference</span>
+</div>
+
+<div class="reminder-box">
+  <ul class="trigger-list">
+    <li>Running a formal M&A process (buy or sell side)</li>
+    <li>Conducting due diligence on a target company</li>
+    <li>Executing a divestiture or carve-out</li>
+    <li>Raising debt or equity capital</li>
+    <li>Responding to an activist investor</li>
+    <li>Completing a joint venture or partnership</li>
+    <li>Running an internal strategic review</li>
+    <li>Post-merger integration document management</li>
+  </ul>
+  <div class="reminder-note">
+    <strong>Remember: </strong>A data room is typically needed BEFORE anything is publicly confirmed. Hiring signals and strategic review statements are often the earliest indicators. The hiring signals section above is your best predictive intelligence tool — a company posting a corporate development role is 90 days ahead of a public announcement.
+  </div>
+</div>
+
+
+<!-- REP PRIORITY -->
+<div class="rep-priority">
+  <div class="rp-label">⭐ Rep Priority This Week</div>
+  <h3>SPX Technologies — Charlotte, NC</h3>
+  <p>A Charlotte-headquartered enterprise company with a board-mandated $2B M&A deployment target, a freshly posted Sr. M&A Associate role, and 16 acquisitions over the past five years — SPX Technologies is the single clearest buy-side signal in the territory this week. Reach their corporate development team before a competitor does.</p>
+</div>
+
+</div><!-- end .container -->
+</body>
+</html>
